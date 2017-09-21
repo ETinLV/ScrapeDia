@@ -39,8 +39,8 @@ def authenticate(csrf_token):
     try:
         from secrets import username, password
     except ImportError:
-        username = input("Please Enter A Username")
-        password = getpass.getpass('Password:')
+        username = input("Please Enter A Username: ")
+        password = getpass.getpass('Password: ')
 
     data = [
         ('authenticity_token', csrf_token),
